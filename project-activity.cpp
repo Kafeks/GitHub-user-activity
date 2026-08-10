@@ -38,7 +38,6 @@ int main() {
 
     string url = "https://api.github.com/users/" + username + "/events";
     string result;
-
     curl_easy_setopt(
         curl,
         CURLOPT_URL,
@@ -70,11 +69,14 @@ int main() {
         cout << type << "->" << repo << "\n";
         
         if (type == "PushEvent") {
+        if (event["payload"].contains("size") &&
+            !event["payload"]["size"].is_null()) {
+
             int size = event["payload"]["size"];
-            
             cout << "Repository: " << repo << "\n";
             cout << "Commits: " << size << "\n";
-        }
+    }
+}
         
     }
     return 0;
