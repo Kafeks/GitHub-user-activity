@@ -62,15 +62,20 @@ int main() {
     );
 
     curl_easy_perform(curl);
-
     json events = json::parse(result);
 
     for(auto& event : events) {
         string type = event["type"];
         string repo = event["repo"]["name"];
         cout << type << "->" << repo << "\n";
+        
+        if (type == "PushEvent") {
+            int size = event["payload"]["size"];
+            
+            cout << "Repository: " << repo << "\n";
+            cout << "Commits: " << size << "\n";
+        }
+        
     }
-
-
     return 0;
 }
