@@ -1,5 +1,7 @@
 # Project Activity
 
+Project URL: https://github.com/Kafeks/GitHub-user-activity
+
 A small command-line tool written in C++ that fetches a GitHub user's recent public activity (events) using the GitHub REST API and prints it to the console. For `PushEvent` entries, it also fetches the commit comparison between the `before` and `head` commits and prints the total number of commits in that push.
 
 ## Features
