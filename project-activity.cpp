@@ -1,10 +1,3 @@
-// g++ project-activity.cpp \
-// -I/opt/homebrew/include \
-// -I/opt/homebrew/opt/curl/include \
-// -L/opt/homebrew/opt/curl/lib \
-// -lcurl \
-// -o project_activity
-
 #include <iostream>
 #include <curl/curl.h>
 #include <nlohmann/json.hpp>
