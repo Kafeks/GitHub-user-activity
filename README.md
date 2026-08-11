@@ -148,7 +148,7 @@ Commits: 1
 If the request fails (for example, due to an invalid username or rate limiting), the tool prints the error message returned by the GitHub API:
 
 ```
-Ошибка: Not Found
+Error: Not Found
 ```
 
 ## Notes
